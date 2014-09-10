@@ -26,7 +26,6 @@ function OSXReporter (runner) {
     title = util.format('%d passed, %d failed, %d pending', stats.passes, stats.failures, stats.pending);
     message = util.format('Duration: %dms, Tests: %d', stats.duration, stats.passes + stats.failures + stats.pending);
     notify({ type: type, title: 'Test results', subtitle: title, message: message, group: 'mocha' });
-    self.epilogue.call(self);
   });
 }
 
