@@ -33,5 +33,5 @@ OSXReporter.prototype.__proto__ = Base.prototype;
 
 if (process.platform !== 'darwin') {
   // overwrite reporter with void function for non-OSX
-  OSXReporter = function (runner) {}
+  exports = module.exports = OSXReporter = function (runner) {}
 }
